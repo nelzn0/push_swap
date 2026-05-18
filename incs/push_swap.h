@@ -6,21 +6,23 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 16:30:23 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:06:12 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# define <unistd.h>
-# define <stddef.h>
-# define <stdlib.h>
+# include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <limits.h>
 
-typedef struct t_node
+typedef struct s_node
 {
-	int **stack;
-} 	t_node;
+	int				value;
+	struct s_node	*next;
+}	t_node;
 
 // move handling
 void	handle_push(t_node **stack_a, t_node **stack_b, const char *operation);
@@ -36,5 +38,9 @@ void	rrotate(t_node **stack);
 
 // disorder
 float	find_disorder(t_node **stack);
+
+// utils
+long	ft_atol(char *str);
+int		is_valid_int(char *str);
 
 #endif

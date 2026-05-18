@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 19:06:12 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:25:39 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,7 @@ float	find_disorder(t_node **stack);
 long	ft_atol(char *str);
 int		is_valid_int(char *str);
 
+// node management
+t_node	*new_node(int value);
+void	move_to_top(t_node **arr, t_node *new);
 #endif

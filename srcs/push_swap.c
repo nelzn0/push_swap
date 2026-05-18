@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 19:38:56 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/18 20:01:20 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ int	main(int argc, char **argv)
 	{
 		if (is_valid_int(argv[i]) == 0)
 			return (write(2, "Error\n", 6), 0);
-		args = ft_atol(argv[i++]);
+		args = ft_atol(argv[i]);
 		if (args > INT_MAX || args < INT_MIN)
 			return (write(2, "Error\n", 6), 0);
+		if (has_duplicate(argv, i) == 1)
+			return (write(2, "Error\n", 6), 0);
+		i++;
 	}
 	while ((argc - 1) > 1)
 	{

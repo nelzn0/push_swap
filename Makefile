@@ -6,7 +6,7 @@
 #    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 17:29:55 by nda-roch          #+#    #+#              #
-#    Updated: 2026/05/18 20:07:21 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/05/18 20:11:38 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,13 @@ SRCS = srcs/push.c \
 						srcs/node_management.c
 OBJS = $(SRCS:.c=.o)
 
-$(FT_PRINTF_LIB):
-			$(MAKE) -C $(FT_PRINTF) 
-
 all: $(NAME)
 
 $(NAME): $(FT_PRINTF_LIB)	$(OBJS) 
 				$(CC) $(CFLAGS) $(OBJS) -L$(FT_PRINTF) -lftprintf -o $(NAME)
+
+$(FT_PRINTF_LIB):
+			$(MAKE) -C $(FT_PRINTF) 
 
 %.o: %.c
 				$(CC) $(CFLAGS) -c $< -o $@

@@ -6,20 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 16:40:12 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/18 18:03:35 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	t_node	**stack_1;
-	t_node	**stack_2;
-
-	**stack_1 = {3, 7, 2, 1}
-	**stack_2 = {8, 5, 7, 4}
-
-
-
+	return (0);
 }

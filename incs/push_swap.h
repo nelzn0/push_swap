@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 19:57:09 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 19:58:25 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void	radix(t_node **stack_a, t_node **stack_b);
 
 // disorder
 float	find_disorder(t_node **stack);
+
+// normalization
+void	normalize(t_node **stack);
 
 // utils
 long	ft_atol(char *str);

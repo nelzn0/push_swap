@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 13:50:23 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 19:57:09 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ void	swap(t_node **stack);
 void	rotate(t_node **stack);
 void	rrotate(t_node **stack);
 
+// algos
+void	radix(t_node **stack_a, t_node **stack_b);
+
 // disorder
 float	find_disorder(t_node **stack);
 
@@ -45,6 +48,7 @@ long	ft_atol(char *str);
 int		is_valid_int(char *str);
 int		is_sorted(t_node **stack);
 void	free_stack(t_node **stack);
+int		stack_size(t_node **stack);
 
 // node management
 t_node	*new_node(int value);

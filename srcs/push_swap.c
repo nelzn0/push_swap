@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:01:28 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:45:05 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 			return (write(2, "Error\n", 6), 0);
 		i++;
 	}
-	while ((argc - 1) > 1)
+	while ((argc - 1) >= 1)
 	{
 		new = new_node((int)ft_atol(argv[argc - 1]));
 		move_to_top(&stack_a, new);
@@ -44,7 +44,7 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(&stack_a) == 1)
 		return (free_stack(&stack_a), 0);
-	//placeholder
+	// test
 	normalize(&stack_a);
 	radix(&stack_a, &stack_b);
 	return (free_stack(&stack_a), 0);

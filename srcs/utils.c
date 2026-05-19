@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:46:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 19:42:00 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:08:43 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	free_stack(t_node **stack)
 	if (!stack || !*stack)
 		return ;
 	current = *stack;
-	while (*stack)
+	while (current)
 	{
 		temp = current->next;
 		free(current);

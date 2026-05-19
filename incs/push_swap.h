@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 19:57:59 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 12:52:57 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
+# include "ft_printf.h"
 
 typedef struct s_node
 {

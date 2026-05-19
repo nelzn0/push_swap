@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 13:49:24 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:01:28 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	(void)stack_b;
 	i = 1;
 	if (argc <= 1)
 		return (0);
@@ -45,9 +44,8 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(&stack_a) == 1)
 		return (free_stack(&stack_a), 0);
-
-
-
-
+	//placeholder
+	normalize(&stack_a);
+	radix(&stack_a, &stack_b);
 	return (free_stack(&stack_a), 0);
 }

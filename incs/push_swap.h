@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 19:58:25 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:23:40 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
-// move handling
-void	handle_push(t_node **stack_a, t_node **stack_b, const char *operation);
+// move printing
+void	pa(t_node **stack_a, t_node **stack_b);
+void	pb(t_node **stack_a, t_node **stack_b);
 void	handle_swap(t_node **stack_a, t_node **stack_b, const char *operation);
-void	handle_rotate(t_node **stack_a, t_node **stack_b, const char *operation);
+void	ra(t_node **stack);
+void	rb(t_node **stack);
 void	handle_rrotate(t_node **stack_a, t_node **stack_b, const char *operation);
 
 // moves

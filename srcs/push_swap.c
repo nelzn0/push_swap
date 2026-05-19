@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 20:01:20 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 12:56:58 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
+	(void)stack_b;
 	i = 1;
 	if (argc <= 1)
 		return (0);

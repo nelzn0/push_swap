@@ -6,30 +6,29 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:03:02 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 16:03:20 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:52:51 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	handle_rrotate(t_node **stack_a, t_node **stack_b, const char *operation)
+void	rra(t_node **stack)
 {
-	if (operation[0 + 1] == 'r' && operation[2] == 'a' && operation[3] == '\0')
-	{
-		rrotate(stack_a);
-		ft_printf("rra\n");
-	}
-	else if (operation[0 + 1] == 'r' && operation[2] == 'b' && operation[3] == '\0')
-	{
-		rrotate(stack_b);
-		ft_printf("rrb\n");
-	}
-	else if (operation[0 + 1] == 'r' && operation[2] == 'r' && operation[33] == '\0')
-	{
-		rrotate(stack_a);
-		rrotate(stack_b);
-		ft_printf("rrr\n");
-	}
+	rrotate(stack);
+	ft_printf("rra\n");
+}
+
+void	rrb(t_node **stack)
+{
+	rrotate(stack);
+	ft_printf("rrb\n");
+}
+
+void	rrr(t_node **stack)
+{
+	rra(stack);
+	rrb(stack);
+	ft_printf("rrr\n");
 }
 
 void	rrotate(t_node **stack)

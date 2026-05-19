@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:14:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 16:17:19 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 12:55:01 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ float	find_disorder(t_node **stack)
 		while (pair_pos1 != NULL)
 		{
 			pairs++;
-			if (pair_pos0->content > pair_pos1->content)
+			if (pair_pos0->value > pair_pos1->value)
 				mistakes++;
 			pair_pos1 = pair_pos1->next;
 		}

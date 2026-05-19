@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:06:00 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:51:44 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:56:22 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	sa(t_node **stack)
 {
-	swap(stack_a);
+	swap(stack);
 	ft_printf("sa\n");
 }
 
 void	sb(t_node **stack)
 {
-	swap(stack_b);
+	swap(stack);
 	ft_printf("sb\n");
 }
 
 void	ss(t_node **stack)
 {
-	swap(stack_a);
-	swap(stack_b);
+	sa(stack);
+	sb(stack);
 	ft_printf("ss\n");
 }
 

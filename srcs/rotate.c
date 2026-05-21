@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:35:44 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:49:48 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:35:09 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	rb(t_node **stack)
 	ft_printf("rb\n");
 }
 
-void	rr(t_node **stack)
+void	rr(t_node **stack_a, t_node **stack_b)
 {
-	ra(stack);
-	rb(stack);
+	rotate(stack_a);
+	rotate(stack_b);
 	ft_printf("rr\n");
 }
 

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:18:09 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:39:16 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ void	pa(t_node **stack_a, t_node **stack_b);
 void	pb(t_node **stack_a, t_node **stack_b);
 void	sa(t_node **stack);
 void	sb(t_node **stack);
-void	ss(t_node **stack);
+void	ss(t_node **stack_a, t_node **stack_b);
 void	ra(t_node **stack);
 void	rb(t_node **stack);
-void	rr(t_node **stack);
+void	rr(t_node **stack_a, t_node **stack_b);
 void	rra(t_node **stack);
 void	rrb(t_node **stack);
-void	rrr(t_node **stack);
+void	rrr(t_node **stack_a, t_node **stack_b);
 
 // moves
 void	push(t_node **stack_a, t_node **stack_b);

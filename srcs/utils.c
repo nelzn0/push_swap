@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:46:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:08:43 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 20:23:15 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,14 @@ int	stack_size(t_node **stack)
 		current = current->next;
 	}
 	return (count);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (s1 - s2);
 }

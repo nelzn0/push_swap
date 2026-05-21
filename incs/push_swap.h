@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 18:29:36 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 19:48:20 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ typedef struct s_node
 	int				value;
 	struct s_node	*next;
 }	t_node;
+
+typedef struct s_config
+{
+	int	strategy;
+	int	bench_mode;
+}	t_config;
 
 // move printing
 void	pa(t_node **stack_a, t_node **stack_b);

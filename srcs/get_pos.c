@@ -6,9 +6,11 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 16:56:38 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 17:21:28 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 17:49:31 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	get_min_pos(t_node *stack_a)
 {
@@ -34,4 +36,26 @@ int	get_min_pos(t_node *stack_a)
 		ptr = ptr->next;
 	}
 	return (min_pos);
+}
+
+int	get_max_pos(t_node *stack_b)
+{
+	int	max_rank;
+	int	max_pos;
+	int	current_pos;
+
+	max_rank = -1;
+	max_pos = 0;
+	current_pos = 0;
+	while (stack_b)
+	{
+		if (stack_b->value > max_rank)
+		{
+			max_rank = stack_b->value;
+			max_pos = current_pos;
+		}
+		current_pos++;
+		stack_b = stack_b->next;
+	}
+	return (max_pos);
 }

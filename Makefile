@@ -6,7 +6,7 @@
 #    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 17:29:55 by nda-roch          #+#    #+#              #
-#    Updated: 2026/05/19 20:03:15 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/05/21 18:31:36 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,16 @@ SRCS = srcs/push.c \
 						srcs/swap.c \
 						srcs/rotate.c \
 						srcs/rrotate.c \
-						srcs/disorder.c \
+						srcs/get_disorder.c \
 						srcs/push_swap.c \
 						srcs/parse.c \
 						srcs/utils.c \
 						srcs/node_management.c \
 						srcs/normalize.c \
-						srcs/radix.c
+						srcs/get_pos.c \
+						srcs/selection_sort.c \
+						srcs/chunk_sort.c \
+						srcs/radix.c \
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

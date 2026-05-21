@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 17:53:16 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 18:29:36 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	rrotate(t_node **stack);
 
 // algos
 void	selection_sort(t_node **stack_a, t_node **stack_b);
+void	chunk_sort(t_node **stack_a, t_node **stack_b);
 void	radix_sort(t_node **stack_a, t_node **stack_b);
 
 // disorder
@@ -71,5 +72,6 @@ int		has_duplicate(char **argv, int i);
 
 // get positions
 int		get_min_pos(t_node *stack_a);
+int		get_max_pos(t_node *stack_b);
 
 #endif

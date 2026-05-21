@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 21:15:03 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:21:02 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config)
 		return (normalize(stack_a), chunk_sort(stack_a, stack_b));
 	else if (config.strategy == 3)
 		return (normalize(stack_a), radix_sort(stack_a, stack_b));
-	size = stack_size(stack_a);
+	size = stack_size(*stack_a);
 	if (size == 2)
 		return (sa(stack_a));
 	else if (size == 3)
@@ -101,7 +101,6 @@ static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config)
 int	main(int argc, char **argv)
 {
 	int			start;
-	float		initial_disorder;
 	t_node		*stack_a;
 	t_node		*stack_b;
 	t_config	config;
@@ -118,7 +117,7 @@ int	main(int argc, char **argv)
 	build_stack(argc, argv, start, &stack_a);
 	if (is_sorted(&stack_a) == 1)
 		return (free_stack(&stack_a), 0);
-	initial_disorder = get_disorder(&stack_a);
+	get_disorder(&stack_a);
 	route_sorting(&stack_a, &stack_b, config);
 	return (free_stack(&stack_a), 0);
 }

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:46:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 20:23:15 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:19:22 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,15 @@ void	free_stack(t_node **stack)
 	*stack = NULL;
 }
 
-int	stack_size(t_node **stack)
+int	stack_size(t_node *stack)
 {
 	int		count;
 	t_node	*current;
 
 	count = 0;
-	if (!stack || !*stack)
+	if (!stack)
 		return (0);
-	current = *stack;
+	current = stack;
 	while (current)
 	{
 		count++;

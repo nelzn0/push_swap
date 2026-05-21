@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:52:55 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 17:53:00 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:21:40 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 	int	count;
 
 	i = 0;
-	n = stack_size(stack_a);
+	n = stack_size(*stack_a);
 	while (((n - 1) >> i) != 0)
 	{
 		count = 0;

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 21:14:25 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:15:03 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config)
 		return (normalize(stack_a), radix_sort(stack_a, stack_b));
 	size = stack_size(stack_a);
 	if (size == 2)
-		return (sa(stack_a);
+		return (sa(stack_a));
 	else if (size == 3)
 		return (sort_three(stack_a));
 	else if (size <= 5)

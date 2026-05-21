@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 19:48:20 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:07:18 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int		is_valid_int(char *str);
 int		is_sorted(t_node **stack);
 void	free_stack(t_node **stack);
 int		stack_size(t_node **stack);
+int		ft_strcmp(char *s1, char *s2);
 
 // node management
 t_node	*new_node(int value);

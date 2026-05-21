@@ -6,13 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 19:18:46 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 21:09:49 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 17:51:41 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	radix(t_node **stack_a, t_node **stack_b)
+void	radix_sort(t_node **stack_a, t_node **stack_b)
 {
 	int	i;
 	int	n;

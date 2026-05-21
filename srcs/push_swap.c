@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:25:50 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:47:10 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,6 @@ int	main(int argc, char **argv)
 	build_stack(argc, argv, start, &stack_a);
 	if (is_sorted(&stack_a) == 1)
 		return (free_stack(&stack_a), 0);
-	get_disorder(&stack_a);
 	route_sorting(&stack_a, &stack_b, config);
 	return (free_stack(&stack_a), 0);
 }

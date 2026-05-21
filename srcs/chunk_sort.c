@@ -6,17 +6,31 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:29:51 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 18:18:46 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:09:14 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static int	rotate_reset(t_node **stack_a, int chunk_size,
+			int i, int *rotate_count)
+{
+	(*rotate_count)++;
+	if (*rotate_count == stack_size(*stack_a))
+	{
+		i = i + chunk_size;
+		*rotate_count = 0;
+	}
+	return (i);
+}
+
 static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size)
 {
 	int	i;
+	int	rotate_count;
 
 	i = 0;
+	rotate_count = 0;
 	while (*stack_a)
 	{
 		if ((*stack_a)->value <= i)
@@ -31,7 +45,10 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size)
 			i++;
 		}
 		else
+		{
 			ra(stack_a);
+			i = rotate_reset(stack_a, chunk_size, i, &rotate_count);
+		}
 	}
 }
 

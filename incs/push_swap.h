@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 21:33:35 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:18:09 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	move_to_top(t_node **arr, t_node *new);
 
 // parse
 int		is_valid_int(char *str);
-int		has_duplicate(char **argv, int i);
+int		has_duplicate(char **argv, int i, int start);
 
 // get positions
 int		get_min_pos(t_node *stack_a);

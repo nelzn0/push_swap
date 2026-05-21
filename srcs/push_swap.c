@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 21:21:02 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 22:25:50 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	validate_args(char **argv, int start)
 		args = ft_atol(argv[i]);
 		if (args > INT_MAX || args < INT_MIN)
 			return (write(2, "Error\n", 6), 0);
-		if (has_duplicate(argv, i) == 1)
+		if (has_duplicate(argv, i, start) == 1)
 			return (write(2, "Error\n", 6), 0);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:08:13 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:37:14 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/21 21:13:21 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ void	pb(t_node **stack_a, t_node **stack_b)
 	ft_printf("pb\n");
 }
 
-void	push(t_node **stack_1, t_node **stack_2)
+void	push(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*node_to_move;
 
-	if (!stack_1 || !*stack_1)
+	if (!stack_a || !*stack_a)
 		return ;
-	node_to_move = *stack_1;
-	*stack_1 = (*stack_1)->next;
-	node_to_move->next = *stack_2;
-	*stack_2 = node_to_move;
+	node_to_move = *stack_a;
+	*stack_a = (*stack_a)->next;
+	node_to_move->next = *stack_b;
+	*stack_b = node_to_move;
 }

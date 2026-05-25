@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:39:45 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/19 20:04:31 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:37:23 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	normalize(t_node **stack)
 		compare = *stack;
 		while (compare)
 		{
-			if (current->value > compare->value)
+			if (current->numbers > compare->numbers)
 				rank++;
 			compare = compare->next;
 		}

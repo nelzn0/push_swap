@@ -6,20 +6,20 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:21:01 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/18 19:26:23 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:40:16 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*new_node(int value)
+t_node	*new_node(int arg_numbers)
 {
 	t_node	*new;
 
 	new = malloc(sizeof(t_node));
 	if (!new)
 		return (NULL);
-	new->value = value;
+	new->numbers = arg_numbers;
 	new->next = NULL;
 	return (new);
 }

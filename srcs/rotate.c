@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:35:44 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:35:09 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:55:32 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	rotate(t_node **stack)
 	{
 		current = current->next;
 	}
-	current->next = head;
 	*stack = head->next;
 	head->next = NULL;
+	current->next = head;
 }

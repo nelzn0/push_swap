@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:39:16 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:40:38 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_node
 {
 	int				value;
+	int				numbers;
 	struct s_node	*next;
 }	t_node;
 
@@ -70,7 +71,7 @@ int		stack_size(t_node *stack);
 int		ft_strcmp(char *s1, char *s2);
 
 // node management
-t_node	*new_node(int value);
+t_node	*new_node(int arg_numbers);
 void	move_to_top(t_node **arr, t_node *new);
 
 // parse

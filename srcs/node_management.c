@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:21:01 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/25 16:40:16 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:20:49 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_node	*new_node(int arg_numbers)
 	if (!new)
 		return (NULL);
 	new->numbers = arg_numbers;
+	new->value = 0;
 	new->next = NULL;
 	return (new);
 }

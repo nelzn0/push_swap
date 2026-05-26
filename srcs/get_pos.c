@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 16:56:38 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 17:49:31 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:16:09 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int	get_min_pos(t_node *stack_a)
 	ptr = stack_a;
 	min_pos = 0;
 	current_pos = 0;
-	min = stack_a->value;
+	min = stack_a->numbers;
 	while (ptr)
 	{
-		if (ptr->value < min)
+		if (ptr->numbers < min)
 		{
-			min = ptr->value;
+			min = ptr->numbers;
 			min_pos = current_pos;
 		}
 		current_pos++;
@@ -44,14 +44,16 @@ int	get_max_pos(t_node *stack_b)
 	int	max_pos;
 	int	current_pos;
 
-	max_rank = -1;
+	max_rank = stack_b->numbers;
 	max_pos = 0;
 	current_pos = 0;
+	if (!stack_b)
+		return (0);
 	while (stack_b)
 	{
-		if (stack_b->value > max_rank)
+		if (stack_b->numbers > max_rank)
 		{
-			max_rank = stack_b->value;
+			max_rank = stack_b->numbers;
 			max_pos = current_pos;
 		}
 		current_pos++;

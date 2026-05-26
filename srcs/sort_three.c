@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 18:50:21 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 19:12:19 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:55:20 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	sort_three(t_node **stack_a)
 	int	mid;
 	int	bot;
 
-	top = (*stack_a)->value;
-	mid = (*stack_a)->next->value;
-	bot = (*stack_a)->next->next->value;
+	top = (*stack_a)->numbers;
+	mid = (*stack_a)->next->numbers;
+	bot = (*stack_a)->next->next->numbers;
 	if (top > mid && mid > bot)
 	{
 		sa(stack_a);

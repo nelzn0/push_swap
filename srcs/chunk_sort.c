@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:29:51 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:09:14 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:24:42 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,13 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size)
 			pb(stack_a, stack_b);
 			rb(stack_b);
 			i++;
+			rotate_count = 0;
 		}
 		else if ((*stack_a)->value <= i + chunk_size)
 		{
 			pb(stack_a, stack_b);
 			i++;
+			rotate_count = 0;
 		}
 		else
 		{

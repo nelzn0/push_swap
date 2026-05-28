@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 14:07:08 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 19:06:03 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config,
 		return (selection_sort(stack_a, stack_b, bench));
 	normalize(stack_a);
 	disorder = get_disorder(stack_a);
-	if (disorder < 0.2f)
+	if (disorder < 0.2f && size < 20)
 		selection_sort(stack_a, stack_b, bench);
 	else if (disorder >= 0.2f && disorder < 0.5f)
 		chunk_sort(stack_a, stack_b, bench);

@@ -6,29 +6,35 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:35:44 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/25 16:55:32 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 13:55:52 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_node **stack)
+void	ra(t_node **stack, t_bench *bench)
 {
 	rotate(stack);
 	ft_printf("ra\n");
+	bench->ra++;
+	bench->total_ops++;
 }
 
-void	rb(t_node **stack)
+void	rb(t_node **stack, t_bench *bench)
 {
 	rotate(stack);
 	ft_printf("rb\n");
+	bench->rb++;
+	bench->total_ops++;
 }
 
-void	rr(t_node **stack_a, t_node **stack_b)
+void	rr(t_node **stack_a, t_node **stack_b, t_bench *bench)
 {
 	rotate(stack_a);
 	rotate(stack_b);
 	ft_printf("rr\n");
+	bench->rr++;
+	bench->total_ops++;
 }
 
 void	rotate(t_node **stack)

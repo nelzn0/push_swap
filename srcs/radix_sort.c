@@ -6,13 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:52:55 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/25 16:38:10 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:08:11 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	radix_sort(t_node **stack_a, t_node **stack_b)
+void	radix_sort(t_node **stack_a, t_node **stack_b, t_bench *bench)
 {
 	int	i;
 	int	n;
@@ -26,14 +26,14 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 		while (count < n)
 		{
 			if (((*stack_a)->value & (1 << i)) == 0)
-				pb(stack_a, stack_b);
+				pb(stack_a, stack_b, bench);
 			else
-				ra(stack_a);
+				ra(stack_a, bench);
 			count++;
 		}
 		while (*stack_b)
 		{
-			pa(stack_a, stack_b);
+			pa(stack_a, stack_b, bench);
 		}
 		i++;
 	}

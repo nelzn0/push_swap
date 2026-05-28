@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:29:51 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/26 19:24:42 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:10:08 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static int	rotate_reset(t_node **stack_a, int chunk_size,
 	return (i);
 }
 
-static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size)
+static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size,
+		t_bench *bench)
 {
 	int	i;
 	int	rotate_count;
@@ -35,26 +36,26 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size)
 	{
 		if ((*stack_a)->value <= i)
 		{
-			pb(stack_a, stack_b);
-			rb(stack_b);
+			pb(stack_a, stack_b, bench);
+			rb(stack_b, bench);
 			i++;
 			rotate_count = 0;
 		}
 		else if ((*stack_a)->value <= i + chunk_size)
 		{
-			pb(stack_a, stack_b);
+			pb(stack_a, stack_b, bench);
 			i++;
 			rotate_count = 0;
 		}
 		else
 		{
-			ra(stack_a);
+			ra(stack_a, bench);
 			i = rotate_reset(stack_a, chunk_size, i, &rotate_count);
 		}
 	}
 }
 
-static void	push_to_a(t_node **stack_a, t_node **stack_b)
+static void	push_to_a(t_node **stack_a, t_node **stack_b, t_bench *bench)
 {
 	int	max_pos;
 	int	size_b;
@@ -67,7 +68,7 @@ static void	push_to_a(t_node **stack_a, t_node **stack_b)
 		{
 			while (max_pos)
 			{
-				rb(stack_b);
+				rb(stack_b, bench);
 				max_pos--;
 			}
 		}
@@ -75,15 +76,15 @@ static void	push_to_a(t_node **stack_a, t_node **stack_b)
 		{
 			while (max_pos < size_b)
 			{
-				rrb(stack_b);
+				rrb(stack_b, bench);
 				max_pos++;
 			}
 		}
-		pa(stack_a, stack_b);
+		pa(stack_a, stack_b, bench);
 	}
 }
 
-void	chunk_sort(t_node **stack_a, t_node **stack_b)
+void	chunk_sort(t_node **stack_a, t_node **stack_b, t_bench *bench)
 {
 	int	size;
 	int	chunk_size;
@@ -93,6 +94,6 @@ void	chunk_sort(t_node **stack_a, t_node **stack_b)
 		chunk_size = 15;
 	else
 		chunk_size = 35;
-	push_to_b(stack_a, stack_b, chunk_size);
-	push_to_a(stack_a, stack_b);
+	push_to_b(stack_a, stack_b, chunk_size, bench);
+	push_to_a(stack_a, stack_b, bench);
 }

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/21 22:47:10 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:07:08 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,32 +70,53 @@ static void	build_stack(int argc, char **argv, int start, t_node **stack_a)
 	}
 }
 
-static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config)
+static void	bench_count_zero(t_bench	*bench)
+{
+	if (bench == NULL)
+		return ;
+	bench->total_ops = 0;
+	bench->sa = 0;
+	bench->sb = 0;
+	bench->ss = 0;
+	bench->pa = 0;
+	bench->pb = 0;
+	bench->ra = 0;
+	bench->rb = 0;
+	bench->rr = 0;
+	bench->rra = 0;
+	bench->rrb = 0;
+	bench->rrr = 0;
+	bench->strategy = 0;
+}
+
+static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config,
+		t_bench *bench)
 {
 	int		size;
 	float	disorder;
 
+	bench_count_zero(bench);
 	if (config.strategy == 1)
-		return (selection_sort(stack_a, stack_b));
+		return (selection_sort(stack_a, stack_b, bench));
 	else if (config.strategy == 2)
-		return (normalize(stack_a), chunk_sort(stack_a, stack_b));
+		return (normalize(stack_a), chunk_sort(stack_a, stack_b, bench));
 	else if (config.strategy == 3)
-		return (normalize(stack_a), radix_sort(stack_a, stack_b));
+		return (normalize(stack_a), radix_sort(stack_a, stack_b, bench));
 	size = stack_size(*stack_a);
 	if (size == 2)
-		return (sa(stack_a));
+		return (sa(stack_a, bench));
 	else if (size == 3)
-		return (sort_three(stack_a));
+		return (sort_three(stack_a, bench));
 	else if (size <= 5)
-		return (selection_sort(stack_a, stack_b));
+		return (selection_sort(stack_a, stack_b, bench));
 	normalize(stack_a);
 	disorder = get_disorder(stack_a);
 	if (disorder < 0.2f)
-		selection_sort(stack_a, stack_b);
+		selection_sort(stack_a, stack_b, bench);
 	else if (disorder >= 0.2f && disorder < 0.5f)
-		chunk_sort(stack_a, stack_b);
+		chunk_sort(stack_a, stack_b, bench);
 	else
-		radix_sort(stack_a, stack_b);
+		radix_sort(stack_a, stack_b, bench);
 }
 
 int	main(int argc, char **argv)
@@ -104,6 +125,7 @@ int	main(int argc, char **argv)
 	t_node		*stack_a;
 	t_node		*stack_b;
 	t_config	config;
+	t_bench		bench;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -117,6 +139,8 @@ int	main(int argc, char **argv)
 	build_stack(argc, argv, start, &stack_a);
 	if (is_sorted(&stack_a) == 1)
 		return (free_stack(&stack_a), 0);
-	route_sorting(&stack_a, &stack_b, config);
+	route_sorting(&stack_a, &stack_b, config, &bench);
+	if (config.bench_mode == 1)
+		benchmark(&bench);
 	return (free_stack(&stack_a), 0);
 }

@@ -6,14 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 17:29:51 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 18:24:52 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 20:52:41 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	rotate_reset(t_node **stack_a, int chunk_size,
-			int i, int *rotate_count)
+static int	re(t_node **stack_a, int chunk_size, int i, int *rotate_count)
 {
 	(*rotate_count)++;
 	if (*rotate_count == stack_size(*stack_a))
@@ -29,7 +28,6 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size,
 {
 	int	i;
 	int	rotate_count;
-	int	size_b = stack_size(*stack_b);
 
 	i = 0;
 	rotate_count = 0;
@@ -38,7 +36,7 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size,
 		if ((*stack_a)->value <= i)
 		{
 			pb(stack_a, stack_b, bench);
-			if (size_b > 2)
+			if (stack_size(*stack_b) > 2)
 				rb(stack_b, bench);
 			i++;
 			rotate_count = 0;
@@ -50,10 +48,7 @@ static void	push_to_b(t_node **stack_a, t_node **stack_b, int chunk_size,
 			rotate_count = 0;
 		}
 		else
-		{
-			ra(stack_a, bench);
-			i = rotate_reset(stack_a, chunk_size, i, &rotate_count);
-		}
+			(ra(stack_a, bench), i = re(stack_a, chunk_size, i, &rotate_count));
 	}
 }
 

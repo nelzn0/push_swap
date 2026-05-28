@@ -6,7 +6,7 @@
 #    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 17:29:55 by nda-roch          #+#    #+#              #
-#    Updated: 2026/05/28 14:18:29 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/05/28 21:15:54 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ SRCS = srcs/push.c \
 						srcs/rotate.c \
 						srcs/rrotate.c \
 						srcs/get_disorder.c \
-						srcs/push_swap.c \
+						srcs/setup.c \
+						srcs/routing.c \
+						srcs/main.c \
 						srcs/parse.c \
 						srcs/utils.c \
 						srcs/node_management.c \

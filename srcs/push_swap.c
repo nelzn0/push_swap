@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:36:49 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 19:06:03 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 19:14:58 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,15 @@ static void	route_sorting(t_node **stack_a, t_node **stack_b, t_config config,
 	float	disorder;
 
 	bench_count_zero(bench);
+	size = stack_size(*stack_a);
+	if (size >= 100 && config.strategy == 1)
+		config.strategy = 2;
 	if (config.strategy == 1)
 		return (selection_sort(stack_a, stack_b, bench));
 	else if (config.strategy == 2)
 		return (normalize(stack_a), chunk_sort(stack_a, stack_b, bench));
 	else if (config.strategy == 3)
 		return (normalize(stack_a), radix_sort(stack_a, stack_b, bench));
-	size = stack_size(*stack_a);
 	if (size == 2)
 		return (sa(stack_a, bench));
 	else if (size == 3)

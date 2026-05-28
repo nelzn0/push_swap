@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 13:46:26 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 13:46:42 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:46:54 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	benchmark(t_bench *bench)
 	ft_putstr(strategies[bench->strategy]);
 	ft_putfloat_fd(bench->disorder);
 	ft_printf("%\n");
-	ft_printf("Total ops: %i\n", bench->total_ops);
+	ft_printf("\nTotal ops: %i\n", bench->total_ops);
 	ft_printf("sa: %i sb: %i ss: %i pa: %i pb: %i\n", bench->sa, bench->sb, bench->ss, bench->pa, bench->pb);
 	ft_printf("ra: %i rb: %i rr: %i rra: %i rrb: %i rrr: %i\n", bench->ra, bench->rb, bench->rr, bench->rra, bench->rrb, bench->rrr);
 }

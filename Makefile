@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+         #
+#    By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 17:29:55 by nda-roch          #+#    #+#              #
-#    Updated: 2026/05/28 21:15:54 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/06/01 17:18:12 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = srcs/push.c \
 						srcs/main.c \
 						srcs/parse.c \
 						srcs/utils.c \
+						srcs/bench_utils.c \
 						srcs/node_management.c \
 						srcs/normalize.c \
 						srcs/get_pos.c \

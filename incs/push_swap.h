@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 21:20:11 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/01 17:18:15 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,10 @@ int		is_sorted(t_node **stack);
 void	free_stack(t_node **stack);
 int		stack_size(t_node *stack);
 int		ft_strcmp(char *s1, char *s2);
+
+// bench utils
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 // node management
 t_node	*new_node(int arg_numbers);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   benchmark.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 13:46:26 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/28 20:34:04 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/01 16:59:03 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ void	benchmark(t_bench *bench)
 
 	if (!bench || bench->strategy < 0 || bench->strategy > 3)
 		return ;
-	strategies[0] = "%\n[bench] Strategy: --simple";
-	strategies[1] = "%\n[bench] Strategy: --medium";
-	strategies[2] = "%\n[bench] Strategy: --complex";
+	strategies[0] = "%\n[bench] Strategy: --simple / O(n^2)";
+	strategies[1] = "%\n[bench] Strategy: --medium / O(n√n)";
+	strategies[2] = "%\n[bench] Strategy: --complex / O(n log n)";
 	strategies[3] = "%\n[bench] Strategy: --adaptive";
 	ft_putstr_fd("\n[bench] Disorder: ", 2);
 	ft_putfloat_fd(bench->disorder, 2);

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/01 17:18:15 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:54:53 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	swap(t_node **stack);
 void	rotate(t_node **stack);
 void	rrotate(t_node **stack);
 void	sort_three(t_node **stack_a, t_bench *bench);
+void	sort_five(t_node **stack_a, t_node **stack_b, t_bench *bench);
 
 // algos
 void	selection_sort(t_node **stack_a, t_node **stack_b, t_bench *bench);

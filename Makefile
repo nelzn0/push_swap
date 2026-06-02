@@ -6,7 +6,7 @@
 #    By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 17:29:55 by nda-roch          #+#    #+#              #
-#    Updated: 2026/06/01 17:18:12 by nda-roch         ###   ########.fr        #
+#    Updated: 2026/06/02 18:53:52 by nda-roch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = srcs/push.c \
 						srcs/chunk_sort.c \
 						srcs/radix_sort.c \
 						srcs/sort_three.c \
+						srcs/sort_five.c \
 						srcs/benchmark.c
 OBJS = $(SRCS:.c=.o)
 

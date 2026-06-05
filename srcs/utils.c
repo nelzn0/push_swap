@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:46:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/05 15:48:32 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 17:49:41 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ long	ft_atol(char *str)
 	return (sym * n);
 }
 
-int	is_sorted(t_node **stack, t_config *config)
+int	is_sorted(t_node **stack, t_config *config, t_bench *bench)
 {
 	t_node		*pos0;
 	t_node		*pos1;
@@ -53,7 +53,10 @@ int	is_sorted(t_node **stack, t_config *config)
 		pos0 = pos0->next;
 	}
 	if (config->bench_mode == 1)
-		ft_putstr_fd("[bench] Disorder: 0%\n", 2);
+	{
+		bench_count_zero(bench);
+		benchmark(bench);
+	}
 	return (1);
 }
 

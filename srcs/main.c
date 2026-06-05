@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 21:09:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/05 15:48:48 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 17:49:39 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 	if (validate_args(argv, start) == 0)
 		return (0);
 	build_stack(argc, argv, start, &stack_a);
-	if (is_sorted(&stack_a, &config) == 1)
+	if (is_sorted(&stack_a, &config, &bench) == 1)
 		return (free_stack(&stack_a), 0);
 	route_sorting(&stack_a, &stack_b, config, &bench);
 	if (config.bench_mode == 1)

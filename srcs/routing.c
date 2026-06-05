@@ -6,13 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 21:12:16 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/02 18:53:25 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 17:49:46 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	bench_count_zero(t_bench	*bench)
+void	bench_count_zero(t_bench	*bench)
 {
 	if (bench == NULL)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/05 15:48:45 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 17:49:48 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	normalize(t_node **stack);
 
 // utils
 long	ft_atol(char *str);
-int		is_sorted(t_node **stack, t_config *config);
+int		is_sorted(t_node **stack, t_config *config, t_bench *bench);
 void	free_stack(t_node **stack);
 int		stack_size(t_node *stack);
 int		ft_strcmp(char *s1, char *s2);
@@ -116,5 +116,6 @@ int		get_max_pos(t_node *stack_b);
 
 // benchmark
 void	benchmark(t_bench *bench);
+void	bench_count_zero(t_bench	*bench);
 
 #endif

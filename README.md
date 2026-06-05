@@ -148,6 +148,32 @@ Prints a detailed report to `stderr` with the total number of operations, a brea
 
 The program writes `Error` to `stderr` and exits if the input contains non-integer values, integers outside the `INT` range, or duplicate values.
 
+## Contributions
+
+### nda-roch
+- Radix sort && Normalization
+- Rotate
+- Reverse Rotate
+- Sort_three && Sort_five
+
+### side-oli
+- Chunk sort && Chunk utils
+- Selection sort && Selection utils
+- Push
+- Swap
+
+### Both
+- Algorithm choice discussion
+- Optimization
+- Code restructuring and cleanup
+- Debugging
+- Benchmark function
+- Utils
+- Main function
+- Header
+- Makefile
+- ft_printf
+
 -----
 
 ## Resources
@@ -172,4 +198,4 @@ AI was used during this project for the following tasks:
 
 - **README writing:** drafting and structuring this README (with content verified and edited by the authors).
 
-AI was **not** used to write the source code directly. All `.c` and `.h` files were written by nda-roch and side-oli.
+AI suggestions were reviewed, discussed, tested and adapted by `nda-roch` and `side-oli` before integrating into the project.

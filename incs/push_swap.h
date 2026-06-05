@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:36:40 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/06/02 18:54:53 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 15:39:22 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	normalize(t_node **stack);
 
 // utils
 long	ft_atol(char *str);
-int		is_sorted(t_node **stack);
+int		is_sorted(t_node **stack, t_config *config);
 void	free_stack(t_node **stack);
 int		stack_size(t_node *stack);
 int		ft_strcmp(char *s1, char *s2);

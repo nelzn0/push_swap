@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: nda-roch <nda-roch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 19:46:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/26 19:48:38 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/06/05 15:39:19 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ long	ft_atol(char *str)
 	return (sym * n);
 }
 
-int	is_sorted(t_node **stack)
+int	is_sorted(t_node **stack, t_config *config)
 {
-	t_node	*pos0;
-	t_node	*pos1;
+	t_node		*pos0;
+	t_node		*pos1;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return (1);
@@ -52,6 +52,8 @@ int	is_sorted(t_node **stack)
 			return (0);
 		pos0 = pos0->next;
 	}
+	if (config->bench_mode == 1)
+		ft_putstr_fd("[bench] Disorder: 0%\n", 2);
 	return (1);
 }
 

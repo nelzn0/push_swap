@@ -173,6 +173,7 @@ The program writes `Error` to `stderr` and exits if the input contains non-integ
 - Header
 - Makefile
 - ft_printf
+- Disorder calculation
 
 -----
 
